@@ -4,6 +4,13 @@ import { Layout } from 'antd';
 import Header from './common/Header/index';
 import Menu from './common/Menu';
 import React, {Component} from 'react';
+import {Route, Switch} from 'react-router-dom';
+import Main from './pages/Main';
+import Like from './pages/Like';
+import Ability from './pages/Ability';
+import Books from './pages/Books';
+import Setting from './pages/Setting';
+
 const {Footer, Sider, Content} = Layout;
 
 class App extends Component {
@@ -22,7 +29,25 @@ class App extends Component {
         </Sider>
         <Layout>
           <Header></Header>
-          <Content>Content</Content>
+          <Content>
+            <Switch>
+              <Route path='/index'>
+                <Main></Main>
+              </Route>
+              <Route path='/like'>
+                <Like></Like>
+              </Route>
+              <Route path='/ability'>
+                <Ability></Ability>
+              </Route>
+              <Route path='/books'>
+                <Books></Books>
+              </Route>
+              <Route path='/setting'>
+                <Setting></Setting>
+              </Route>
+            </Switch>
+          </Content>
           <Footer>Footer</Footer>
         </Layout>
       </Layout>
