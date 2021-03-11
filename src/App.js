@@ -46,6 +46,9 @@ class App extends Component {
               <Route path='/setting'>
                 <Setting></Setting>
               </Route>
+              <Route path='/'>
+                <Main></Main>
+              </Route>
             </Switch>
           </Content>
           <Footer>Footer</Footer>

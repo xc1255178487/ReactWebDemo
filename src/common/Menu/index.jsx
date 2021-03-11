@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Menu } from 'antd';
 import {
     HomeOutlined,
-    LikeOutlined,
-    HeartOutlined,
+    MenuOutlined,
     BookOutlined,
     SettingOutlined,
 } from '@ant-design/icons';
@@ -23,11 +22,8 @@ export default class App extends Component {
             <Menu.Item key="1" icon={<HomeOutlined />}>
                 <Link to='/index'>首页</Link>
             </Menu.Item>
-            <Menu.Item key="2" icon={<LikeOutlined />}>
-                <Link to='/ability'>能力</Link>
-            </Menu.Item>
-            <Menu.Item key="3" icon={<HeartOutlined />}>
-                <Link to='/like'>爱好</Link>
+            <Menu.Item key="2" icon={<MenuOutlined />}>
+                <Link to='/ability'>计划管理</Link>
             </Menu.Item>
             <SubMenu key="sub1" icon={<BookOutlined />} title="读书">
               <Menu.Item key="5">
