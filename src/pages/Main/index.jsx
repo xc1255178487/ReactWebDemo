@@ -13,19 +13,19 @@ export default class index extends Component {
             {
                 title: '计划',
                 num: 1,
-                icon: 'FileDoneOutlined',
+                icon: <FileDoneOutlined />,
                 color: '#99CC33'
             },
             {
                 title: '任务',
                 num: 2,
-                icon: 'FieldTimeOutlined',
+                icon: <FieldTimeOutlined />,
                 color: '#FF9900'
             },
             {
                 title: '书本',
                 num: 3,
-                icon: 'BookOutlined',
+                icon: <BookOutlined />,
                 color: '#FFCC00'
             }
         ]
@@ -39,12 +39,11 @@ export default class index extends Component {
                             return <Card style={{width: 28 + '%', backgroundColor: item.color}}>
                                     <div className="head-item">
                                         <div className='head-item-icon'>
-                                            <Icon component={item.icon} />
+                                            {item.icon}
                                         </div>
                                         <div className='head-item-right'>
                                             <span>{item.num}</span>
                                             {item.title}
-                                            <Icon component={item.icon} />
                                         </div>
                                     </div>
                                 </Card>;
